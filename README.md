@@ -9,7 +9,7 @@
       <img src="https://img.shields.io/badge/lang-English-blue.svg" alt="English">
 </p>
 <p align="center">
-<a href="https://cloudchronicles.substack.com/publish/home">🔗 Blog post</a>
+<!-- <a href="https://cloudchronicles.substack.com/publish/home">🔗 Blog post</a> -->
 <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
 <a href="https://netrunnerhq.com">🕸️ Website</a>
 <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
@@ -40,7 +40,7 @@ And it doesn't stop at just configuration - Netrunner also supplies you with fil
 - [ ] 🧠 Log streaming & OpenAI GPT-4 automated bug fixing (coming soon)
 - [ ] 🪐 Lambda functions and database provisioning (coming soon)
 
-Netrunner is currently in closed beta. You can sign up for beta access on the Netrunner [website](netrunnerhq.com).
+Netrunner is currently in closed beta. You can sign up for beta access on the Netrunner [website](https://netrunnerhq.com).
 
 ## 👨‍🚀 Getting Started
 
