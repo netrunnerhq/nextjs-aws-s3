@@ -1,0 +1,32 @@
+Description: This template creates the resources necessary for Netrunner to assume to perform actions on your AWS Account.
+
+Parameters:
+  NetrunnerAWSAccountId:
+    Description: Netrunner AWS account ID allowed to assume the integration IAM role. Do not change!
+    Type: String
+    Default: 395261708130
+
+  ExternalParameterId:
+    Description: External Parameter for securing the Netrunner IAM role. Do not change!
+    Type: String
+    Default: ""
+
+Resources:
+  NetrunnerEnvironmentRole:
+    Type: "AWS::IAM::Role"
+    Properties:
+      RoleName: NetrunnerIntegrationRole
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              AWS:
+                - !Sub arn:aws:iam::${NetrunnerAWSAccountId}:role/netrunner-forward-lambda-integration-role-prod
+            Action: "sts:AssumeRole"
+            Condition:
+              StringEquals:
+                "sts:ExternalId": !Ref ExternalParameterId
+      ManagedPolicyArns:
+        - "arn:aws:iam::aws:policy/CloudWatchLogsReadOnlyAccess"
+        - "arn:aws:iam::aws:policy/AmazonS3FullAccess"
