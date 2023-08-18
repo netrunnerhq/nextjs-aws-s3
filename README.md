@@ -15,50 +15,81 @@
 <p align="center">
 <a href="https://netrunnerhq.com">👩‍💻 Demo</a>
 <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
+<a href="/example/">🌱 App Router Example</a>
+<span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
+<a href="/example/">🏞️ Page Router Example</a>
+<span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
 <a href="https://netrunnerhq.com">🕸️ Website</a>
 <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
 <a href="#-getting-started">🤝 Contribute</a>
 </p>
 
-**Netrunner** is the fastest tool to implement secure AWS storage in Next.js apps. It enables you to:
+Netrunner is a batteries included tool to implement secure AWS storage in Next.js apps. Unlike other tools, it also solves the problem of configuring S3 buckets in your AWS account. How it works:
 
 1. Automatically configure an S3 bucket in your AWS account using best practice CORS config and IAM policies.
-2. Implement file uploads in 3 lines of code with a helpfull npm package.
-3. Use a UI dashboard to view and manage files, cloud assets and make use of instant APIs.
+2. Implement file uploads in a couple lines of code through an npm package.
+3. View and manage files in a helpfull UI dashboard.
+   <br />
 
+Netrunner is being developed by [Vincent Hus](https://github.com/davincios) and you can watch a demo video [here]()
 <br />
+
 <p align="center">
   <img src="./docs/logo/demo.gif" alt="Wing Demo" height="360px">
 </p>
 
-Netrunner is built by [Vincent Hus](https://github.com/davincios)
+## 🪄 Getting Started
 
-## 🎬 Installation
+<!-- @todo: follow Xata.io or Stripe documentation to make it clean-->
+
+Make sure you have a Next.js app and AWS account at the ready. Let's get started!
+
+### 🔋 Step 1. Package installation
+
+First install the Netrunner [npm](https://npmwebsite.com) package to handle file uploads.
 
 ```console
-npm install next-upload
-yarn add next-upload
-pnpm add next-upload
+npm install @netrunner/next-s3
 ```
 
-## 👨‍🚀 Getting Started
+```console
+yarn add @netrunner/next-s3
+```
 
-0.
-1.
+```console
+pnpm add @netrunner/nextjs-s3
+```
+
+### 🌱 Step 2. Implement file upload component
+
+When using app router:
+
+```tsx
+// pages/upload-page.tsx
+import { useFileUpload } from "@netrunner/nextjs-aws-s3";
+```
+
+When using page router:
+
+```tsx
+// pages/upload-page.tsx
+import { useFileUpload } from "@netrunner/nextjs-aws-s3";
+```
+
+### 🎋 Step 3. Create a new API route api/upload-file.ts
+
+### Step 4. Create a new API route api/upload-file.ts
+
+Pre-requisites:
+
+1. Login with GitHub on NetrunnerHq.com and proceed through the quick-start.
+2.
 
 The easiest way to get started with Netrunner is the automatic setup CLI available on [npm](https://www.npmjs.com/package/@storengine/client). The cli sets up the following for Netrunner:
 
 - Environment variables.
 - Example code repository
 - A quickstart S3 bucket in your cloud account
-
-Before you get started, please make sure you have the following installed:
-
-- Netrunner API keys (available after signup)
-- AWS SDK and CLI
-- An OpenAI API key
-- Node.js
-- Visual studio code
 
 ## 🚀 Tech Stack
 
