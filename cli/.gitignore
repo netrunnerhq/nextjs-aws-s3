@@ -1,0 +1,20 @@
+*-debug.log
+*-error.log
+/.nyc_output
+/dist
+/lib
+/package-lock.json
+/tmp
+/yarn.lock
+node_modules
+oclif.manifest.json
+pages
+
+.env.local
+
+# local env files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
