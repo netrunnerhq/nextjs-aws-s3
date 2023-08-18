@@ -10,7 +10,7 @@
 </p>
 <p align="center">
 <!-- <a href="https://cloudchronicles.substack.com/publish/home">🔗 Blog post</a> -->
-<span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
+<!-- <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span> -->
 <a href="https://netrunnerhq.com">🕸️ Website</a>
 <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
 <a href="#-getting-started">🤝 Contribute</a>
