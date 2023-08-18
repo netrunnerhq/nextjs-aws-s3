@@ -1,5 +1,5 @@
 import { NextApiHandler } from "next";
-import { apiSignS3Url } from "@storengine/client";
+import { apiSignS3Url } from "@netrunnerhq/client";
 
 const handler: NextApiHandler = async (req, res) => {
   if (req.method !== "GET")
