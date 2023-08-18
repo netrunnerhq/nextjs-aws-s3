@@ -22,7 +22,7 @@ Netrunner streamlines the process of integrating AWS S3 storage into your Next.j
 
 And it doesn't stop at just configuration - Netrunner also supplies you with file previews for any media and easy-to-use security policy configurations, so that you don't have to reinvent the wheel.
 
-## ✨ UI Screenshot July 22th 2023
+## ✨ UI Screenshot 
 
 <br />
 <p align="center">
