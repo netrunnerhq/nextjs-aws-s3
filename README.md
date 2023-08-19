@@ -19,7 +19,7 @@
 
 Netrunner is a batteries included tool to implement secure AWS storage in Next.js apps. Unlike other tools, it also solves the problem of configuring S3 buckets in your AWS account. Here's how it works:
 
-1. Automatically configures an S3 bucket in your AWS account using best practice CORS config and IAM policies.
+1. Automatically configures an S3 bucket in your AWS account using best practice CORS and IAM policies.
 2. Implement file uploads in a couple lines of code through an npm package.
 3. View and manage files in a helpfull UI dashboard.
 
