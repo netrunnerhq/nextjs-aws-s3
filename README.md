@@ -22,12 +22,8 @@ Netrunner is a batteries included tool to implement secure AWS storage in Next.j
 1. Automatically configures an S3 bucket in your AWS account using best practice CORS config and IAM policies.
 2. Implement file uploads in a couple lines of code through an npm package.
 3. View and manage files in a helpfull UI dashboard.
-   <br />
 
-Netrunner is being developed by [Vincent Hus](https://github.com/davincios) and you can watch a demo implementation video [here]()
-<br />
-
-## 🪄 Get started
+## 🪄 Get started with Next.js and AWS S3 file uploads
 
 <!-- @todo: follow Xata.io or Stripe documentation to make it clean-->
 
@@ -95,7 +91,7 @@ Deploy an S3 bucket on your AWS account by following the quickstart on [netrunne
   <img src="./docs/logo/connect-aws-account.png" alt="Netrunner demo connect AWS account" height="360px">
 </p>
 
-### 🎉 Step 5. Upload file
+### 🎉 Step 5. Upload file and finish!
 
 Verify in your AWS console if the bucket is deployed correctly in the S3 service [page](https://s3.console.aws.amazon.com/s3/home?region=us-east-1) and upload a file as a last step:
 
@@ -105,4 +101,6 @@ Verify in your AWS console if the bucket is deployed correctly in the S3 service
 
 ## 🦾 About Netrunner
 
-We are on a mission to enable JavaScript software engineers to transform their AWS cloud account into a personalised Firebase developer platform. Learn more by visiting our [website](https://netrunnerhq.com) or ping Vincent on twitter [@jvf_hus](https://twitter.com/vincent_hus)
+Netrunner is being developed by [Vincent Hus](https://github.com/davincios) with the mission to enable JavaScript software engineers to transform their AWS cloud account into a personalised Firebase developer platform.
+
+You can learn more by visiting our [website](https://netrunnerhq.com) or ping Vincent on twitter [@jvf_hus](https://twitter.com/vincent_hus)
