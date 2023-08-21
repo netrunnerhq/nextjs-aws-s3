@@ -8,7 +8,7 @@ export const s3Client = new S3Client({
   },
 });
 
-export const uploadFile = async (file: File) => {
+export const uploadFile = async (file: File): Promise<string> => {
   try {
     const uploadParams = {
       Bucket: "storengine-v0.43-quick-start-uploads-nextjs",
@@ -17,7 +17,9 @@ export const uploadFile = async (file: File) => {
     };
     const data = await s3Client.send(new PutObjectCommand(uploadParams));
     console.log("File uploaded successfully. S3 response:", data);
+    return file.name; // Return the object key after successful upload.
   } catch (err) {
     console.error("Error occurred while uploading file:", err);
+    throw err; // Propagate the error to the caller so it can be handled appropriately.
   }
 };
