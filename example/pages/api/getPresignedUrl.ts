@@ -7,29 +7,17 @@ import {
 } from "@aws-sdk/client-s3";
 import { NextApiRequest, NextApiResponse } from "next";
 
-const s3Client = new S3Client({
-  region: `${process.env.AWS_REGION}`,
-  credentials: {
-    accessKeyId: `${process.env.AWS_ACCESS_KEY_ID}`,
-    secretAccessKey: `${process.env.AWS_SECRET_ACCESS_KEY}`,
-  },
-});
-
 export async function getPresignedUrlS3({
   bucketName,
   objectKey,
-  client = s3Client,
-  expirationTimeInSeconds,
-  requestType = "get",
+  client,
+  requestType,
 }: {
   bucketName: string;
   objectKey: string;
   client?: S3Client;
-  expirationTimeInSeconds: number;
   requestType?: "put" | "get";
 }): Promise<string> {
-  if (!expirationTimeInSeconds)
-    throw new Error("[presigned-url.ts] expirationTimeInSeconds is required");
   if (!client) throw new Error("[presigned-url.ts] client is required");
   if (!bucketName) throw new Error("[presigned-url.ts] bucketName is required");
   if (!objectKey) throw new Error("[presigned-url.ts] objectKey is required");
@@ -59,7 +47,7 @@ export async function getPresignedUrlS3({
     }
 
     const signedUrl = await getSignedUrl(client as any, command as any, {
-      expiresIn: expirationTimeInSeconds,
+      expiresIn: 3600,
     });
 
     return signedUrl;
@@ -69,13 +57,21 @@ export async function getPresignedUrlS3({
   }
 }
 
+const s3Client = new S3Client({
+  region: `${process.env.AWS_REGION}`,
+  credentials: {
+    accessKeyId: `${process.env.AWS_ACCESS_KEY_ID}`,
+    secretAccessKey: `${process.env.AWS_SECRET_ACCESS_KEY}`,
+  },
+});
+
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  const { objectKey, expirationTimeInSeconds, requestType } = req.body;
+  const { objectKey, requestType } = req.body;
 
-  console.log({
+  console.log("[getPresignedUrl.ts] req.body", {
     reqBody: req.body,
   });
 
@@ -83,10 +79,7 @@ export default async function handler(
     res.status(400).json({ error: "Object key is required" });
     return;
   }
-  if (!expirationTimeInSeconds) {
-    res.status(400).json({ error: "Expiration time is required" });
-    return;
-  }
+
   if (!requestType) {
     res.status(400).json({ error: "Request type is required" });
     return;
@@ -96,8 +89,8 @@ export default async function handler(
     const signedUrl = await getPresignedUrlS3({
       bucketName: `${process.env.S3_BUCKET_NAME}`,
       objectKey,
-      expirationTimeInSeconds,
       requestType,
+      client: s3Client,
     });
 
     res.status(200).json({ url: signedUrl });
