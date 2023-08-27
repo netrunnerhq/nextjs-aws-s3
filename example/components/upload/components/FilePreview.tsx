@@ -8,14 +8,10 @@ const FilePreview: React.FC<{
 }> = ({ imgUrl, status, awsConsole }) => {
   return (
     <>
-      <Status status={status} awsConsoleObjectUrl={awsConsole} />
       {imgUrl && status === "success" && (
-        <img
-          src={imgUrl}
-          alt="uploaded file"
-          className="max-h-80 m-auto pt-20"
-        />
+        <img src={imgUrl} alt="uploaded file" className="max-h-80 m-auto p-2" />
       )}
+      <Status status={status} awsConsoleObjectUrl={awsConsole} />
     </>
   );
 };
