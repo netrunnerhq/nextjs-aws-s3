@@ -1,0 +1,1 @@
+export { UploadComponent } from "./UploadComponent";

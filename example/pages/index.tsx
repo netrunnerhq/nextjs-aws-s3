@@ -1,5 +1,5 @@
 import { Inter } from "next/font/google";
-import { UploadComponent } from "@/components/UploadComponent";
+import { UploadComponent } from "@/upload/UploadComponent";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -12,16 +12,7 @@ export default function Home() {
         Next.js to AWS S3 upload file example
       </p>
       <UploadComponent />
-      <div className="fixed bottom-0 left-0 flex h-[100px] w-full items-end justify-cente  dark:bg-zinc-900">
-        <a
-          className="m-auto pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          By Netrunner (netrunnerhq.com)
-        </a>
-      </div>
+      <div className="fixed bottom-0 left-0 flex h-[100px] w-full items-end justify-center  dark:bg-zinc-900" />
     </main>
   );
 }

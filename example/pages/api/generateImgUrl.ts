@@ -65,6 +65,14 @@ const s3Client = new S3Client({
   },
 });
 
+function getAwsConsoleUrl(
+  bucketName: string,
+  region: string,
+  objectKey: string
+): string {
+  return `https://s3.console.aws.amazon.com/s3/object/${bucketName}?region=${region}&prefix=${objectKey}`;
+}
+
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
@@ -93,7 +101,13 @@ export default async function handler(
       client: s3Client,
     });
 
-    res.status(200).json({ url: signedUrl });
+    const awsConsoleUrl = getAwsConsoleUrl(
+      `${process.env.S3_BUCKET_NAME}`,
+      `${process.env.AWS_REGION}`,
+      objectKey
+    );
+
+    res.status(200).json({ signedUrl, awsConsoleUrl });
   } catch (err) {
     console.error("API Error:", err);
     res.status(500).json({ error: "Failed to generate presigned URL." });
