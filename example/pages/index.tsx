@@ -1,8 +1,9 @@
 import { Inter } from "next/font/google";
-import { UploadComponent } from "@/upload/UploadComponent";
+import { UploadComponent } from "../upload";
 
 const inter = Inter({ subsets: ["latin"] });
 
+//
 export default function Home() {
   return (
     <main

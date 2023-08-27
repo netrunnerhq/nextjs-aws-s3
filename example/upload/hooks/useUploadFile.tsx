@@ -1,9 +1,8 @@
 import { useState } from "react";
 import { uploadFileToS3 } from "../utils/index";
 import { TStatus } from "../components/Status";
-import { FilePreview } from "../components/FilePreview";
 
-export const useUploadFileHook = () => {
+export const useUploadFile = () => {
   const [imgUrl, setImgUrl] = useState<string | null>(null);
   const [status, setStatus] = useState<TStatus>("idle");
   const [awsConsole, setAwsConsole] = useState<string | null>(null);
@@ -27,6 +26,5 @@ export const useUploadFileHook = () => {
     status,
     awsConsole,
     handleFileUpload,
-    FilePreview,
   };
 };
