@@ -9,7 +9,7 @@ export function UploadComponent() {
       <input
         onChange={(e) => handleFileUpload(e.target.files?.[0])}
         type="file"
-        className="py-8 text-black"
+        className="py-8"
       />
       <FilePreview imgUrl={imgUrl} status={status} awsConsole={awsConsole} />
     </>
