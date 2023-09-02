@@ -89,6 +89,13 @@ Deploy an S3 bucket on your AWS account by following the quickstart on [netrunne
 docs/logo/gifs/bucket_creation_demo.gif
 
 <p align="center">
+  <video controls autoplay muted loop width="80%">
+    <source src="docs/logo/videos/bucket-creation-vid.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</p>
+<p align="center">
+
   <img src="./docs/logo/gifs/bucket_creation_demo.gif" alt="Netrunner bucket creation gif" height="400px">
 </p>
 
