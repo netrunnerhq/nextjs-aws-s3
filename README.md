@@ -88,6 +88,14 @@ export default async function handler(req, res) {
 Deploy an S3 bucket on your AWS account by following the quickstart on [netrunnerhq.com](https://netrunnerhq.com/). Enter your AWS Account ID that you can find on the right top of the AWS console. This will provide Netrunner with the required IAM permissions to deploy a secure S3 bucket for you:
 
 <p align="center">
+  <img src="./docs/logo/gifs/bucket-creation-v2.gif" alt="Netrunner bucket creation gif" width="80%">
+</p>
+
+<p align="center">
+  <img src="./docs/logo/gifs/bucket-creation-v2.gif" alt="Netrunner bucket creation gif" height="400px">
+</p>
+
+<p align="center">
   <img src="./docs/logo/gifs/bucket-creation.gif" alt="Netrunner bucket creation gif" width="80%">
 </p>
 
