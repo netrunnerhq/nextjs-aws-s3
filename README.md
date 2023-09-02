@@ -91,18 +91,6 @@ Deploy an S3 bucket on your AWS account by following the quickstart on [netrunne
   <img src="./docs/logo/gifs/bucket-creation-v2.gif" alt="Netrunner bucket creation gif" width="80%">
 </p>
 
-<p align="center">
-  <img src="./docs/logo/gifs/bucket-creation-v2.gif" alt="Netrunner bucket creation gif" height="400px">
-</p>
-
-<p align="center">
-  <img src="./docs/logo/gifs/bucket-creation.gif" alt="Netrunner bucket creation gif" width="80%">
-</p>
-
-<p align="center">
-  <img src="./docs/logo/gifs/bucket-creation-v2.gif" alt="Netrunner bucket creation gif" width="80%">
-</p>
-
 ### 🎉 Step 5. Upload file and finish!
 
 Verify in your AWS console if the bucket is deployed correctly in the S3 service [page](https://s3.console.aws.amazon.com/s3/home?region=us-east-1) and upload a file as a last step:
