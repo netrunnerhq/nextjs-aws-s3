@@ -85,9 +85,9 @@ export default async function handler(req, res) {
 
 ### 🪣 Step 4. Bucket configuration
 
-- Deploy an S3 bucket on your AWS account from the Netrunner app by logging in with GitHub and following the quickstart on [netrunnerhq.com](https://netrunnerhq.com/). 
+- Deploy an S3 bucket on your AWS account from the Netrunner app by logging in with GitHub and following the quickstart on [netrunnerhq.com](https://netrunnerhq.com/)
 
-- Enter your AWS account ID that you can find on the right top of the AWS console.
+- Enter your AWS account ID that you can find on the right top of the AWS console
 
 - Verify in your AWS console if the bucket is deployed correctly in the S3 service [page](https://s3.console.aws.amazon.com/s3/home?region=us-east-1)
 
@@ -97,7 +97,12 @@ export default async function handler(req, res) {
 
 ### 🎉 Step 5. Upload file and finish!
 
- and use the code snippets to upload a file as a last step. You can also use the [example](https://github.com/netrunnerhq/nextjs-aws-s3/tree/main/example) code in this repository if convenient. 
+- Add the environment variables to your .env.local file for the bucket name and region. You can copy them from the Netrunner console. 
+
+- Run your app and or use the [example](https://github.com/netrunnerhq/nextjs-aws-s3/tree/main/example) code in this repository if convenient.
+
+- Click the upload button to select a test image. The file should upload correctly!
+
 
 <p align="center">
   <img src="./docs/logo/file-upload-completed.png" alt="Netrunner demo filed upload completed" height="360px">
