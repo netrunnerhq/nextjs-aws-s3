@@ -79,10 +79,6 @@ export default async function handler(
 ) {
   const { objectKey, requestType } = req.body;
 
-  console.log("[getPresignedUrl.ts] req.body", {
-    reqBody: req.body,
-  });
-
   if (!objectKey) {
     res.status(400).json({ error: "Object key is required" });
     return;
