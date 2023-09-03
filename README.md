@@ -85,7 +85,7 @@ export default async function handler(req, res) {
 
 ### 🪣 Step 4. Bucket configuration
 
-- Deploy an S3 bucket on your AWS account from the Netrunner app by logging in with GitHub and following the quickstart on [netrunnerhq.com](https://netrunnerhq.com/)
+- Create an S3 bucket inside your AWS account from the Netrunner app by logging in with GitHub and following the quickstart on [netrunnerhq.com](https://netrunnerhq.com/)
 
 - Enter your AWS account ID that you can find on the right top of the AWS console
 
