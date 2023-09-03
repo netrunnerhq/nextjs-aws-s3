@@ -95,7 +95,7 @@ export default async function handler(req, res) {
   <img src="./docs/logo/gifs/bucket-creation.gif" alt="Netrunner bucket creation gif" width="80%">
 </p>
 
-### 🎉 Step 5. Upload file and finish!
+### 🎉 Step 5. Environment variables and upload file!
 
 - Add the environment variables to your .env.local file for the bucket name and region. You can copy them from the Netrunner console.
 
