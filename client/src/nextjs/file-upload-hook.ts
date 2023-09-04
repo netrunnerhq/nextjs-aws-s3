@@ -1,4 +1,3 @@
-import axios from "axios";
 import { FileUploadInput } from "./components/FileUploadInput";
 
 function validateS3SignedUrl(url: string) {
@@ -34,8 +33,19 @@ export async function uploadFile(file: File): Promise<any> {
   );
 
   try {
-    const upload_response = await axios.put(signed_url, file);
-    return upload_response;
+    const upload_response = await fetch(signed_url, {
+      method: "PUT",
+      body: file,
+      headers: {
+        "Content-Type": file.type,
+      },
+    });
+
+    if (!upload_response.ok) {
+      throw new Error(`HTTP error! Status: ${upload_response.status}`);
+    }
+
+    return await upload_response.json();
   } catch (err) {
     console.error({ err });
     return err;
