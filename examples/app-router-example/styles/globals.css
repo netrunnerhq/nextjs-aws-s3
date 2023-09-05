@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  color: rgb(var(--foreground-rgb));
+  font-size: 1.125rem /* 18px */;
+  line-height: 1.75rem; /* 28px */
+  min-height: 100vh;
+  color: black;
+  text-align: center;
+  padding: 6rem /* 96px */;
+}

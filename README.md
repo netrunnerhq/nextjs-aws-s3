@@ -10,7 +10,7 @@
 <p align="center">
 <a href="https://netrunnerhq.com">👩‍💻 Demo</a>
 <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-<a href="/example/">🦾 Examples</a
+<a href="./examples">🦾 Examples</a
 <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
 <a href="https://netrunnerhq.com">🕸️ Website</a>
 <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
