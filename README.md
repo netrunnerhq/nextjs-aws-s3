@@ -18,6 +18,13 @@
 </p>
 <h1></h1>
 
+## Get started
+1. create an S3 bucket in the Netrunner dashboard: https://netrunnerhq.com/
+2. view the [example](/examples) repositories for both app-and-pages router
+3. copy the template .env file in your terminal: ```cp .env.template .env.local``` and paste your S3 bucket name and env variables
+4. run  ```pnpm dev``` and upload a file!
+
+## 🪶 Features 
 Netrunner is a batteries included tool to implement secure AWS storage in Next.js apps. Unlike other tools, it also solves the problem of configuring S3 buckets in your AWS account. Here's how it works:
 
 1. Automatically configures an S3 bucket in your AWS account using best practice CORS and IAM policies.
