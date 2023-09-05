@@ -1,11 +1,18 @@
-// pages/api/getPresignedUrl.ts
+// app/api/upload.ts
 import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
 import {
   GetObjectCommand,
   PutObjectCommand,
   S3Client,
 } from "@aws-sdk/client-s3";
-import { NextApiRequest, NextApiResponse } from "next";
+
+export function getAwsConsoleUrl(
+  bucketName: string,
+  region: string,
+  objectKey: string
+): string {
+  return `https://s3.console.aws.amazon.com/s3/object/${bucketName}?region=${region}&prefix=${objectKey}`;
+}
 
 export async function getPresignedUrlS3({
   bucketName,
@@ -54,58 +61,5 @@ export async function getPresignedUrlS3({
   } catch (err) {
     console.error("Error generating presigned URL:", err);
     throw err;
-  }
-}
-
-const s3Client = new S3Client({
-  region: `${process.env.AWS_REGION}`,
-  credentials: {
-    accessKeyId: `${process.env.AWS_ACCESS_KEY_ID}`,
-    secretAccessKey: `${process.env.AWS_SECRET_ACCESS_KEY}`,
-  },
-});
-
-function getAwsConsoleUrl(
-  bucketName: string,
-  region: string,
-  objectKey: string
-): string {
-  return `https://s3.console.aws.amazon.com/s3/object/${bucketName}?region=${region}&prefix=${objectKey}`;
-}
-
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
-  const { objectKey, requestType } = req.body;
-
-  if (!objectKey) {
-    res.status(400).json({ error: "Object key is required" });
-    return;
-  }
-
-  if (!requestType) {
-    res.status(400).json({ error: "Request type is required" });
-    return;
-  }
-
-  try {
-    const signedUrl = await getPresignedUrlS3({
-      bucketName: `${process.env.S3_BUCKET_NAME}`,
-      objectKey,
-      requestType,
-      client: s3Client,
-    });
-
-    const awsConsoleUrl = getAwsConsoleUrl(
-      `${process.env.S3_BUCKET_NAME}`,
-      `${process.env.AWS_REGION}`,
-      objectKey
-    );
-
-    res.status(200).json({ signedUrl, awsConsoleUrl });
-  } catch (err) {
-    console.error("API Error:", err);
-    res.status(500).json({ error: "Failed to generate presigned URL." });
   }
 }

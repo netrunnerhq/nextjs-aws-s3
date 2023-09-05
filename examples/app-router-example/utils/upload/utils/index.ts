@@ -6,7 +6,7 @@ async function getPresignedUrl(
   awsConsoleUrl: string;
 }> {
   try {
-    const response = await fetch("/api/generateImgUrl", {
+    const response = await fetch("/api/upload", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
