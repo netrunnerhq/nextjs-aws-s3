@@ -70,6 +70,7 @@ import { apiSignS3Url } from "@netrunnerhq/client";
 
 export default async function handler(req, res) {
   if (req.method !== "GET")
+    // different res for app router
     return res.status(405).json({ message: "Method not allowed" });
 
   if (!req.query.filename || !req.query.filetype)
