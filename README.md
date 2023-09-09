@@ -3,7 +3,7 @@
 </h2>
 
 <p align="center">
-  <img src="./docs/logo/gifs/file-upload.gif" alt="Netrunner demo hero gif" height="360px"> 
+  <img src="./docs/logo/gifs/file-upload.gif" alt="Netrunner demo hero gif" width="80%"> 
   <!-- <img src="./docs/logo/gifs/demo.gif" alt="Netrunner demo hero gif" height="360px"> -->
 </p>
 
