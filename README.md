@@ -103,7 +103,7 @@ export default async function handler(req, res) {
 
 - Add the environment variables to your .env.local file for the bucket name and region. You can copy them from the Netrunner console.
 
-- Run your app and or use the [example](https://github.com/netrunnerhq/nextjs-aws-s3/tree/main/example) code in this repository if convenient.
+- Run your app and or use the [examples](https://github.com/netrunnerhq/nextjs-aws-s3/tree/main/examples) code in this repository if convenient.
 
 - Click the upload button to select a test image. The file should upload correctly!
 
